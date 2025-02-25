@@ -3,6 +3,7 @@ const inputs = document.querySelectorAll(".code");
 inputs[0].focus();
 
 inputs.forEach((input, index) => {
+ input.setAttribute("id", `code-${index + 1}`); 
   input.addEventListener("input", (e) => {
     if (e.target.value.match(/[^0-9]/)) {
       e.target.value = "";
